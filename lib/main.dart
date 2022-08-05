@@ -1,8 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
+import 'package:mango_client/configs/constants.dart';
+import 'package:mango_client/counter.dart';
+import 'package:mango_client/screens/home_screen.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    theme: ThemeData(
+      scaffoldBackgroundColor: kBackgroundColor,
+      primaryColor: kPrimaryColor,
+      // textTheme: Theme.of(context).textTheme.apply(bodyColor: kTextColor),
+      visualDensity: VisualDensity.adaptivePlatformDensity,
+    ),
+    home: const HomeScreen(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
